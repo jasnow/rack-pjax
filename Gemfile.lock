@@ -13,7 +13,7 @@ GEM
     mini_portile2 (2.3.0)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
-    rack (1.6.10)
+    rack (1.6.11)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (12.3.1)
