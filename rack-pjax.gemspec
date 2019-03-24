@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Gert Goet"]
   s.email       = ["gert@thinkcreate.nl"]
   s.homepage    = "https://github.com/eval/rack-pjax"
+  s.license     = "MIT"
   s.summary     = %q{Serve pjax responses through rack middleware}
   s.description = %q{Serve pjax responses through rack middleware}
 
@@ -18,12 +19,10 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency('rack', '~> 1.1')
-  if RUBY_VERSION < "1.9.2"
-    s.add_dependency('nokogiri', '~> 1.5', '< 1.5.11')
-    s.add_dependency('rake', '0.9.6')
-  else
-    s.add_dependency('nokogiri', '~> 1.5')
-    s.add_dependency('rake')
-  end
+  s.add_dependency('rack', '>= 1.1')
+  s.add_dependency('nokogiri', '~> 1.5')
+
+  s.add_development_dependency "rake"
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "rack-test"
 end

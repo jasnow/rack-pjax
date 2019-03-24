@@ -16,7 +16,7 @@ module Rack
 
       new_body = ""
       body.each do |b|
-        b.force_encoding('UTF-8') if RUBY_VERSION > '1.9.0'
+        b = b.dup.force_encoding('UTF-8') if RUBY_VERSION > '1.9.0'
 
         parsed_body = Nokogiri::HTML(b)
         container = parsed_body.at(container_selector(env))
@@ -34,7 +34,7 @@ module Rack
 
       body.close if body.respond_to?(:close)
 
-      headers['Content-Length'] &&= bytesize(new_body).to_s
+      headers['Content-Length'] &&= new_body.bytesize.to_s
       headers['X-PJAX-URL'] ||= Rack::Request.new(env).fullpath
 
       [status, headers, [new_body]]

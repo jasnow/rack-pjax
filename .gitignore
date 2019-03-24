@@ -2,3 +2,4 @@
 .bundle
 pkg/*
 .rbenv-version
+gemfiles/*.lock

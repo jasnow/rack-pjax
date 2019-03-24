@@ -1,5 +1,5 @@
 module Rack
   class Pjax
-    VERSION = "0.8.0"
+    VERSION = "1.1.0"
   end
 end
