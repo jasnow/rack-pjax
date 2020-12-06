@@ -1,4 +1,4 @@
-Rack-pjax [![travis](https://secure.travis-ci.org/eval/rack-pjax.png?branch=master)](https://secure.travis-ci.org/#!/eval/rack-pjax)
+Rack-pjax [![travis](https://secure.travis-ci.com/jasnow/rack-pjax.png?branch=master)](https://secure.travis-ci.com/jasnow/rack-pjax)
 ========
 
 Rack-pjax is middleware that lets you serve 'chrome-less' pages in respond to [pjax-requests](https://github.com/defunkt/jquery-pjax).
